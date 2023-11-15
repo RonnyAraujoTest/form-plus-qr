@@ -26,7 +26,7 @@ function ValidarTelefono() {
 function generarQR(Data) {
   let img = document.querySelector("img");
   let servicio = "https://quickchart.io/qr";
-  var datos = `BEGIN:VCARD\nVERSION:3.0\nN:${Data.Nombres};${Data.Apellidos}\nORG:${Data.Empresa}\nTEL:${Data.Telefono}\nEMAIL:${Data.Correo}\nEND:VCARD`;
+  var datos = `BEGIN:VCARD\nVERSION:3.0\nN:${Data.Apellidos};${Data.Nombres}\nORG:${Data.Empresa}\nTEL:${Data.Telefono}\nEMAIL:${Data.Correo}\nEND:VCARD`;
 
   img.src = `${servicio}?text=` + encodeURIComponent(datos);
   console.log(img.src);
